@@ -1,0 +1,165 @@
+/* Reset some basic elements for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  background-color: #28a745;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* General container styling */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Authentication form styling */
+.auth-container {
+  text-align: center;
+}
+
+.auth-container input {
+  width: 80%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-container button {
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #218838;
+}
+
+/* Profile styling */
+.profile-container p {
+  margin: 0.5rem 0;
+}
+
+.profile-container p span {
+  font-weight: bold;
+}
+
+/* Plan containers */
+.plan, .activity {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plan h3, .activity p {
+  margin-bottom: 0.75rem;
+}
+
+/* Plan descriptions */
+.plan p, .activity p {
+  color: #555;
+}
+
+/* Buttons styling */
+button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Additional utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
