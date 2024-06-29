@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
   weight: Number,
   height: Number,
   fitnessGoals: String,
-  healthConditions: String
+  healthConditions: String,
 });
 
 UserSchema.pre('save', async function (next) {
@@ -22,9 +22,9 @@ UserSchema.pre('save', async function (next) {
   next();
 });
 
-UserSchema.methods.matchPassword = async function (password) {
-  return await bcrypt.compare(password, this.password);
-};
+// const matchPassword = async function (password) {
+//   return await bcrypt.compare(password, this.password);
+// };
 
 const User = mongoose.model('User', UserSchema);
 

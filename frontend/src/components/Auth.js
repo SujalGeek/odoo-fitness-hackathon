@@ -12,7 +12,9 @@ function Auth() {
     try {
       const endpoint = isLogin ? '/auth/login' : '/auth/register';
       const payload = isLogin ? { email, password } : { name, email, password };
-      const response = await axios.post(endpoint, payload);
+      const response = await axios.post(endpoint, payload, {
+        withCredentials: true,
+      });
       localStorage.setItem('token', response.data.token);
       // Redirect to profile or dashboard
       window.location.href = '/profile';
@@ -23,29 +25,29 @@ function Auth() {
   };
 
   return (
-    <div className="container auth-container">
+    <div className='container auth-container'>
       <h2>{isLogin ? 'Login' : 'Register'}</h2>
       {!isLogin && (
         <input
-          type="text"
-          placeholder="Name"
+          type='text'
+          placeholder='Name'
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       )}
       <input
-        type="email"
-        placeholder="Email"
+        type='email'
+        placeholder='Email'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
-        type="password"
-        placeholder="Password"
+        type='password'
+        placeholder='Password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      {error && <p className="error">{error}</p>}
+      {error && <p className='error'>{error}</p>}
       <button onClick={handleSubmit}>{isLogin ? 'Login' : 'Register'}</button>
       <button onClick={() => setIsLogin(!isLogin)}>
         {isLogin ? 'Switch to Register' : 'Switch to Login'}
